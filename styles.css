@@ -235,6 +235,12 @@ footer .social-links .social{
 .banner-description h1{
     font-size: 2rem;
 }
+.banner-description .banner-button{
+    padding: 16px 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: 700;
+}
 /* banner ends */
 
 /* seasonal collection */
@@ -267,8 +273,8 @@ footer .social-links .social{
     max-height: 500px;
     margin-right: 40px;
     border-radius: 20px;
-    box-shadow:  10px 10px 20px #666666,
-                 -10px -10px 20px #ffffff;
+    box-shadow:  5px 5px 10px #5a5a5a,
+                -5px -5px 10px #ffffff;
 }
 .product-card .product-image{
     position: relative;
@@ -343,8 +349,54 @@ footer .social-links .social{
     height: 30px;
 }
 
+.view_more{
+    text-align: center;
+}
+.view_more_button{
+    padding: 8px 16px;
+    background-color: var(--add_to_cart);
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    transition: all ease-in-out 0.1s;
+    box-shadow:  5px 5px 10px #5a5a5a,
+                -5px -5px 10px #ffffff;
+}
+.view_more_button:hover{
+    transform: scale(1.1);
+}
+
 /* seasonal colllection ends */
 
+.special-offers{
+    padding-top: 80px;
+}
+
+
+/* sale banner */
+
+.sale-banner{
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%, #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%);
+
+    display: flex;
+    /* min-height: 50vh; */
+    max-height: 60vh;
+}
+.banner-left,.banner-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-left img{
+    /* width: 50%; */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* sale banner ends */
 
 @media (max-width: 768px){
     .banner{
@@ -355,7 +407,4 @@ footer .social-links .social{
         font-size: 20px;
         margin-top: 3px;
     }
-}
-@media (max-width: 480px){
-
 }
