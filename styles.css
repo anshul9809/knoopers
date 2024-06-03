@@ -2,7 +2,8 @@
     --background-color: #ffffff;
     --text-color: #333333;
     --light-gray: #F7F6F0;
-    --add_to_cart: #a5a5a5;
+    --add_to_cart: #6F6F6F;
+
 
 }
 
@@ -213,7 +214,7 @@ footer .social-links .social{
 .banner .banner-img{
     width: 100%;
     height: 100%;
-    position: inherit;
+    position: relative;
 }
 .banner .banner-description{
     position: absolute;
@@ -273,8 +274,6 @@ footer .social-links .social{
     max-height: 500px;
     margin-right: 40px;
     border-radius: 20px;
-    box-shadow:  5px 5px 10px #5a5a5a,
-                -5px -5px 10px #ffffff;
 }
 .product-card .product-image{
     position: relative;
@@ -314,9 +313,11 @@ footer .social-links .social{
     margin-top: 8px;
     padding: 8px 10px;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
     border-radius: 10px;
     background-color: var(--add_to_cart);
+    color: var(--background-color);
+
 }
 
 .pre-button,
@@ -330,7 +331,6 @@ footer .social-links .social{
   justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  /* background-color: red; */
   cursor: pointer;
   z-index: 8;
 }
@@ -355,15 +355,14 @@ footer .social-links .social{
 .view_more_button{
     padding: 8px 16px;
     background-color: var(--add_to_cart);
+    color: var(--background-color);
     border-radius: 10px;
     font-weight: 900;
     font-size: 20px;
-    transition: all ease-in-out 0.1s;
-    box-shadow:  5px 5px 10px #5a5a5a,
-                -5px -5px 10px #ffffff;
+    transition: all ease-in-out 0.2s;
 }
 .view_more_button:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* seasonal colllection ends */
@@ -377,12 +376,9 @@ footer .social-links .social{
 
 .sale-banner{
     margin-top: 20px;
-    padding: 20px;
     background: linear-gradient(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%, #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%);
-
     display: flex;
-    /* min-height: 50vh; */
-    max-height: 60vh;
+    max-height: fit-content;
 }
 .banner-left,.banner-right{
     flex: 1;
@@ -390,21 +386,97 @@ footer .social-links .social{
     justify-content: center;
     align-items: center;
 }
+.banner-right{
+    padding: 20px;
+}
 .banner-left img{
-    /* width: 50%; */
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
+.banner-right .description{
+    width: 70%;
+    padding: 20px;
+    height: 90%;
+    /* background-color: red; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 10px;
+}
+.tilted-parent .main-tilted{
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+.banner-right .description p{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.banner-right .description h1{
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.banner-right .description a button{
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
 
+.testimonials{
+    padding: 20px;
+}
+.main-gallery{
+    height: 70vh;
+    background-color: yellow;
+}
+.gallery-cell{
+    width: 33%;
+    background-color: red;
+    padding: 20px;
+}
+.gallery-cell .gallery-image{
+    height: 70%;
+}
+.gallery-cell .gallery-image img{
+    width: 100%;
+    height: 100%;
+}
 /* sale banner ends */
 
 @media (max-width: 768px){
     .banner{
         height: 50vh;
     }
+    .special-offers .banner-description{
+        width: 80%;
+        height: 100%;
+        padding-top: 80px;
+    }
     .product-info button{
-        padding: 16px 20px;
+        padding: 16px 16px;
         font-size: 20px;
         margin-top: 3px;
+    }
+    .banner-right .description{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .sale-banner{
+        flex-direction: column;
+        max-height: fit-content;
+    }
+    .banner-left{
+        order: 2;
     }
 }
