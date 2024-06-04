@@ -431,25 +431,6 @@ footer .social-links .social{
     border-radius: 10px;
 }
 
-.testimonials{
-    padding: 20px;
-}
-.main-gallery{
-    height: 70vh;
-    background-color: yellow;
-}
-.gallery-cell{
-    width: 33%;
-    background-color: red;
-    padding: 20px;
-}
-.gallery-cell .gallery-image{
-    height: 70%;
-}
-.gallery-cell .gallery-image img{
-    width: 100%;
-    height: 100%;
-}
 /* sale banner ends */
 
 
@@ -601,6 +582,76 @@ footer .social-links .social{
 .login-button img{
     width: 30px;
 }
+
+/* testimonials slider */
+
+.testimonials{
+    padding: 20px;
+}
+.testimonials .testimonials-heading h2{
+    text-align:center;
+    font-size: 2em;
+}
+.testimonials .testimonials-slider{
+    padding: 30px;
+}
+.testimonials .testimonials-item{
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+.testimonials .testimonials-content .testimonials-info{
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    flex-direction: column;
+}
+.testimonials .testimonials-item .testimonials-main-img{
+    /* max-width: 100%; */
+    max-height: 300px;
+    object-fit: cover;
+}
+.testimonials .testimonials-item .testimonials-rating{
+    display: flex;
+    
+}
+.testimonials .testimonials-item .rating-star{
+    max-width: 30px;
+}
+.testimonials .testimonials-item .testimonials-name p{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.testimonials .testimonials-item .testimonials-description{
+    font-size: 12px;
+}
+
+.testimonials .testimonials-slider .swiper-button-prev{
+    color: black;
+    left: 0;
+}
+.testimonials .testimonials-slider .swiper-button-next{
+    right: 0;
+    color: black
+}
+.testimonials .testimonials-slider .swiper-button-next::after,
+.testimonials .testimonials-slider .swiper-button-prev::after{
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+}
+ 
+
+
+
+
+
+/* testimonials slider ends */
+
 
 
 

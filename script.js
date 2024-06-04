@@ -28,3 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 });
+
+const swiper = new Swiper(".testimonials-slider", {
+    grabCursor: true,
+    spaceBetween: 30,
+    breakpoints:{
+        1024:{
+            slidesPerView: 3,
+        },
+        768:{
+            slidesPerView: 2,
+        },
+        580:{
+            slidesPerView:1
+        }
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
