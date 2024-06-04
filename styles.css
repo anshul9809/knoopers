@@ -653,4 +653,7 @@ footer .social-links .social{
     .contact-left .contact-list li{
         font-size: 16px;
     }
+    .contact-section::after{
+        display: none;
+    }
 }
